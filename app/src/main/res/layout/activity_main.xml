@@ -7,7 +7,7 @@
     >
 
     <ListView
-        android:id="@+id/basics_functionality_Lay_activity_main"
+        android:id="@+id/basics_Command_Lay_activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 
