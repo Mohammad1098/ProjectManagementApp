@@ -3,13 +3,13 @@ package com.example.android.projectmanagement.BasicsFunctionality.BasicsCommands
 public class Command {
 
     private String CommandName;
-    private int CommandNumber;
+    private int CommandType;
 
 
-    public Command(String commandName , int commandNumber){
+    public Command(String commandName , int commandType){
 
         this.CommandName = commandName;
-        this.CommandNumber = commandNumber;
+        this.CommandType = commandType;
 
     }
 
@@ -19,15 +19,15 @@ public class Command {
         CommandName = commandName;
     }
 
-    public void setCommandNumber(int commandNumber) {
-        CommandNumber = commandNumber;
+    public void setCommandType(int commandNumber) {
+        CommandType = commandNumber;
     }
 
     public String getCommandName() {
         return CommandName;
     }
 
-    public int getCommandNumber() {
-        return CommandNumber;
+    public int getCommandType() {
+        return CommandType;
     }
 }
