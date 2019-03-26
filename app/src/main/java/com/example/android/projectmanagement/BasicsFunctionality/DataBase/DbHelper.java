@@ -34,18 +34,30 @@ public class DbHelper extends SQLiteOpenHelper {
         String Resource_Table = "CREATE TABLE "+Schema.Resource.TABLE_NAME +"("
 
                 +Schema.Resource.ID + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
-                +Schema.Resource.RESOURCE_NAME +" TEXT NOT NULL ,"
+                +Schema.Resource.RESOURCE_NAME +" TEXT,"
                 +Schema.Resource.RESOURCE_TYPE +" INTEGER  ,"
-                +Schema.Resource.MATERIAL +" INTEGER  ,"
+                +Schema.Resource.MATERIAL +" TEXT  ,"
                 +Schema.Resource.NUMBER_OF_SOURCE +" INTEGER  ,"
                 +Schema.Resource.SALARY_PER_HOURE +" REAL  ,"
                 +Schema.Resource.OVERTIME +" REAL  ,"
                 +Schema.Resource.COST_USE +" REAL  );";
 
 
+        String TASK_RESOURCE_TABLE = "CREATE TABLE "+Schema.Task_Resource.TABLE_NAME +"("
+
+                +Schema.Task_Resource.ID+" PRIMARY KEY AUTOINCREMENT ,"
+                +Schema.Task_Resource.TASK_ID +" INTEGER ,"
+                +Schema.Task_Resource.RESOURCE_ID +" INTEGER ,"
+                +"FOREIGN KEY ("+ Schema.Task_Resource.TASK_ID+") REFERENCES "+Schema.Task.TABLE_NAME+"("+Schema.Task.ID+")) ,"
+                +"FOREIGN KEY ("+ Schema.Task_Resource.RESOURCE_ID+") REFERENCES "+Schema.Resource.TABLE_NAME+"("+Schema.Resource.ID+"));";
+
+
+
+
 
         db.execSQL(TASK_Table);
         db.execSQL(Resource_Table);
+        db.execSQL(TASK_RESOURCE_TABLE);
 
     }
 

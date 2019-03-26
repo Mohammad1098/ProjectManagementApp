@@ -3,11 +3,19 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+
+    <Spinner
+        android:id="@+id/resource_type_Spinner_Lay_add_new_resource"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        />
 
 
     <EditText
@@ -17,27 +25,15 @@
         android:inputType="text"
         android:hint="Resource name"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
-        />
-
-
-    <Spinner
-        android:id="@+id/resource_type_Spinner_Lay_add_new_resource"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
         android:layout_marginBottom="5dp"
-
         />
-
 
     <EditText
         android:id="@+id/material_Lay_add_new_resource"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:inputType="text"
-        android:hint="Material"
+        android:hint="Material Name"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
@@ -68,7 +64,7 @@
         />
 
     <EditText
-        android:id="@+id/over_time_cost_Lay_add_new_resource"
+        android:id="@+id/over_time_Lay_add_new_resource"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:inputType="numberDecimal"
@@ -83,12 +79,23 @@
         android:id="@+id/Cost_Use_Lay_add_new_resource"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:inputType="numberSigned"
-        android:hint="Cost/Use"
+        android:inputType="numberDecimal"
+        android:hint="Cost"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         />
+
+
+    <Button
+        android:id="@+id/add_new_resource_Lay_add_new_resource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Add"
+        android:textColor="#ffffff" />
 
 
 

@@ -3,12 +3,14 @@ package com.example.android.projectmanagement.BasicsFunctionality.BasicsCommands
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.android.projectmanagement.BasicsFunctionality.Task.add_New_Task;
+import com.example.android.projectmanagement.BasicsFunctionality.Resource.AddNewResource;
+import com.example.android.projectmanagement.BasicsFunctionality.Resource.RetrieveListOfResourceBoundary;
+import com.example.android.projectmanagement.BasicsFunctionality.Task.RetrieveListOfTaskBoundary;
+import com.example.android.projectmanagement.BasicsFunctionality.Task.AddNewTask;
 import com.example.android.projectmanagement.R;
 
 public class RetrieveBasicsCommandBoundary extends AppCompatActivity {
@@ -78,8 +80,16 @@ public class RetrieveBasicsCommandBoundary extends AppCompatActivity {
 
 
             case 0:
-                return new Intent(RetrieveBasicsCommandBoundary.this , add_New_Task.class );
+                return new Intent(RetrieveBasicsCommandBoundary.this , AddNewTask.class );
 
+            case 1:
+                return new Intent(RetrieveBasicsCommandBoundary.this , AddNewResource.class );
+
+            case 3:
+                return new Intent(RetrieveBasicsCommandBoundary.this , RetrieveListOfTaskBoundary.class );
+
+            case 4:
+                return new Intent(RetrieveBasicsCommandBoundary.this , RetrieveListOfResourceBoundary.class );
 
             default: return null;
         }

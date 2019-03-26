@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="3"
+
+        >
+
+        <TextView
+            android:id="@+id/resource_type_Lay_resource_list_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            tools:text="Worker"
+            />
+
+        <TextView
+            android:id="@+id/resource_name_Lay_resource_list_item"
+            android:layout_below="@id/resource_type_Lay_resource_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            tools:text="Project Manager"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/number_of_source_String_Lay_resource_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:text="Number of Source"
+                />
+
+            <TextView
+                android:id="@+id/number_of_source_Lay_resource_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/number_of_source_String_Lay_resource_list_item"
+                tools:text="5"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/salary_or_cost_String_Lay_resource_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                tools:text="Salary or Cost"
+                />
+
+            <TextView
+                android:id="@+id/salary_or_cost_Lay_resource_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@id/salary_or_cost_String_Lay_resource_list_item"
+                tools:text="500$"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/over_time_String_Lay_resource_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="Over Time"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                />
+
+
+            <TextView
+                android:id="@+id/over_time_Lay_resource_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@id/over_time_String_Lay_resource_list_item"
+                tools:text="500$"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

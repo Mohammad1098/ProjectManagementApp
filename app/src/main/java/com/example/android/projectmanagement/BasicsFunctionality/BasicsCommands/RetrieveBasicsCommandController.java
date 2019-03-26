@@ -37,14 +37,14 @@ public class RetrieveBasicsCommandController {
         ArrayList<Command> commandsList = new ArrayList<>();
 
 
-        commandsList.add(new Command("Adding New Task " , 0 ));
-        commandsList.add(new Command("Adding New Resource " , 1 ));
+        commandsList.add(new Command("New Task " , 0 ));
+        commandsList.add(new Command("New Resource " , 1 ));
         commandsList.add(new Command("Allocate Resources to the Task " , 2 ));
-        commandsList.add(new Command("Display Tasks " , 3 ));
-        commandsList.add(new Command("Display Resources " , 4 ));
-        commandsList.add(new Command("Display Tasks with Resources " , 5 ));
-        commandsList.add(new Command("Total Cost for each Task" , 6 ));
-        commandsList.add(new Command("Total Cost " , 7 ));
+        commandsList.add(new Command("Tasks " , 3 ));
+        commandsList.add(new Command("Resources " , 4 ));
+        commandsList.add(new Command("Tasks with Resources " , 5 ));
+        commandsList.add(new Command("Task Total Cost" , 6 ));
+        commandsList.add(new Command("Project Total Cost " , 7 ));
 
 
         return commandsList;

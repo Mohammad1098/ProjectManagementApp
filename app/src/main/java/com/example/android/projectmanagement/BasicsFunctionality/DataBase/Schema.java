@@ -70,4 +70,27 @@ public final class Schema {
 
     }
 
+
+    public static abstract class Task_Resource implements BaseColumns{
+
+        public static final String CONTENT_AUTHORITY = "com.example.android.ProjectManagement";
+
+        public static final Uri BASE_URI = Uri.parse("content://"+CONTENT_AUTHORITY);
+
+        public static final String PATH = "Task_Resource";
+
+        public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_URI , PATH);
+
+        public static final String TABLE_NAME = "Task_Resource";
+
+        public static final String ID = BaseColumns._ID;
+
+        public static final String TASK_ID ="TASK_ID";
+
+        public static final String RESOURCE_ID ="RESOURCE_ID";
+
+
+
+    }
+
 }

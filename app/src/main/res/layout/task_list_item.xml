@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="2"
+
+        >
+
+    <TextView
+        android:id="@+id/task_name_Lay_task_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_margin="20dp"
+        android:textSize="18sp"
+        tools:text="Test Test Test Test Test Test Test Test Test Test Test"
+        />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/startdate_String_Lay_task_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:text="Start Date"
+                />
+
+            <TextView
+                android:id="@+id/task_start_date_Lay_task_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/startdate_String_Lay_task_list_item"
+                tools:text="23/12/2014"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/enddate_String_Lay_task_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:text="End Date"
+                />
+
+            <TextView
+                android:id="@+id/task_end_date_Lay_task_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@id/enddate_String_Lay_task_list_item"
+                tools:text="23/12/2014"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/task_duration_Lay_task_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:text="3 Days"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

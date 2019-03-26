@@ -15,16 +15,19 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.android.projectmanagement.BasicsFunctionality.BasicsCommands.RetrieveBasicsCommandBoundary;
+import com.example.android.projectmanagement.BasicsFunctionality.DataBase.Schema;
 import com.example.android.projectmanagement.R;
 
 import java.util.Calendar;
 
-public class add_New_Task extends AppCompatActivity {
+public class AddNewTask extends AppCompatActivity {
 
     private EditText taskNameEditText;
     private Button taskStartDate,taskEndDate,addTask;
     private DatePickerDialog datePickerDialog;
     private Calendar calendar;
+    private long startDate,endDate;
     private int day,month,year;
     private int startDay,startMonth,startYear;
     private int endDay,endMonth,endYear;
@@ -59,7 +62,7 @@ public class add_New_Task extends AppCompatActivity {
                 year= calendar.get(Calendar.YEAR);
 
 
-                datePickerDialog = new DatePickerDialog(add_New_Task.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(AddNewTask.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
@@ -67,6 +70,10 @@ public class add_New_Task extends AppCompatActivity {
                         startMonth =month;
                         startYear=year;
 
+                        calendar.set(datePickerDialog.getDatePicker().getYear(), datePickerDialog.getDatePicker().getMonth(), datePickerDialog.getDatePicker().getDayOfMonth(),
+                                0, 0, 0);
+
+                        startDate = calendar.getTimeInMillis();
 
 
                     }
@@ -93,13 +100,19 @@ public class add_New_Task extends AppCompatActivity {
                 year= calendar.get(Calendar.YEAR);
 
 
-                datePickerDialog = new DatePickerDialog(add_New_Task.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(AddNewTask.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
                         endDay =dayOfMonth;
                         endMonth =month;
                         endYear=year;
+
+
+                        calendar.set(datePickerDialog.getDatePicker().getYear(), datePickerDialog.getDatePicker().getMonth(), datePickerDialog.getDatePicker().getDayOfMonth(),
+                               0, 0, 0);
+
+                        endDate = calendar.getTimeInMillis();
 
 
 
@@ -142,6 +155,14 @@ public class add_New_Task extends AppCompatActivity {
         }
 
 
+        if(endDate < startDate){
+
+            Toast.makeText(getApplicationContext() , "Please make sure that end date is correct" , Toast.LENGTH_LONG).show();
+            return;
+
+        }
+
+
         if(startDay==0 || startMonth ==0 || startYear == 0 || endDay==0 || endMonth ==0 || endYear == 0){
 
             Toast.makeText(getApplicationContext() , "Please select start/end date" , Toast.LENGTH_LONG).show();
@@ -151,16 +172,17 @@ public class add_New_Task extends AppCompatActivity {
 
 
 
-        //ContentValues contentValues = new ContentValues();
+        ContentValues contentValues = new ContentValues();
 
-        //contentValues.put(Schema.Device.NAME , deviceName);
-       // contentValues.put(Schema.Device.PIN , devicePin);
-        //contentValues.put(Schema.Device.ROOM , deviceRoom);
-        //contentValues.put(Schema.Device.TYPE , selectedCategory);
+        contentValues.put(Schema.Task.TASK_NAME , taskName);
+        contentValues.put(Schema.Task.START_DATE , startDate);
+        contentValues.put(Schema.Task.END_DATE , endDate);
+        long task_duratiom = endDate - startDate;
+        contentValues.put(Schema.Task.TASK_DURATION , task_duratiom);
 
-        //getContentResolver().insert(Schema.Device.CONTENT_URI, contentValues);
+        getContentResolver().insert(Schema.Task.CONTENT_URI, contentValues);
 
-        //returnToPreviousLayout();
+        returnToPreviousLayout();
 
 
     }
@@ -169,15 +191,9 @@ public class add_New_Task extends AppCompatActivity {
 
     private void returnToPreviousLayout(){
 
-        //Intent openSpecificDeviceLayoutIntent = new Intent(Add_new_device.this, RetrieveSpecificDeviceBoundary.class);
+        Intent openHomeScreenLayoutIntent = new Intent(AddNewTask.this, RetrieveBasicsCommandBoundary.class);
 
-
-        //send the id of selected device to RetrieveListOfOperationBoundary class
-        //openSpecificDeviceLayoutIntent.putExtra("TYPE", type);
-        //openSpecificDeviceLayoutIntent.putExtra("MICROCONTROLLER_ID", MicroControllerID);
-
-
-        //startActivity(openSpecificDeviceLayoutIntent);
+        startActivity(openHomeScreenLayoutIntent);
 
 
     }

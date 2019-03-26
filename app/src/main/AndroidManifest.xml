@@ -18,7 +18,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:parentActivityName=".BasicsFunctionality.BasicsCommands.RetrieveBasicsCommandBoundary" android:name=".BasicsFunctionality.Task.add_New_Task"></activity>
+        <activity android:parentActivityName=".BasicsFunctionality.BasicsCommands.RetrieveBasicsCommandBoundary" android:name=".BasicsFunctionality.Task.AddNewTask"></activity>
+        <activity android:parentActivityName=".BasicsFunctionality.BasicsCommands.RetrieveBasicsCommandBoundary" android:name=".BasicsFunctionality.Resource.AddNewResource"></activity>
+        <activity android:parentActivityName=".BasicsFunctionality.BasicsCommands.RetrieveBasicsCommandBoundary" android:name=".BasicsFunctionality.Task.RetrieveListOfTaskBoundary"></activity>
+        <activity android:parentActivityName=".BasicsFunctionality.BasicsCommands.RetrieveBasicsCommandBoundary" android:name=".BasicsFunctionality.Resource.RetrieveListOfResourceBoundary"></activity>
+        <activity android:parentActivityName=".BasicsFunctionality.Task.RetrieveListOfTaskBoundary" android:name=".BasicsFunctionality.TASK_RESOURCE.Task_Resource_Allocation"></activity>
+
+
+
+        <provider
+            android:authorities="com.example.android.ProjectManagement"
+            android:name=".BasicsFunctionality.DataBase.ProjectManagement_Provider"
+            android:exported="false"></provider>
 
     </application>
 
