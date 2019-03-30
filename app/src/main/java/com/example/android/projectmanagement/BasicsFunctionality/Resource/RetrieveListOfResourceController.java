@@ -77,4 +77,30 @@ public class RetrieveListOfResourceController {
         return retrieveListOfResourceDA.retrieveResourcesId(resource_Name);
 
     }
+
+
+    public String retrieveResourcesById(long resourceId){
+
+        retrieveListOfResourceDA = new RetrieveListOfResourceDA(this.activity);
+
+
+        return retrieveListOfResourceDA.retrieveResourcesById(resourceId);
+
+
+    }
+
+
+    public double resourceCost(long resourceId , long taskId){
+
+        retrieveListOfResourceDA = new RetrieveListOfResourceDA(this.activity);
+
+        return retrieveListOfResourceDA.resourceCost(resourceId , taskId);
+
+
+    }
+
+
+
+
+
 }

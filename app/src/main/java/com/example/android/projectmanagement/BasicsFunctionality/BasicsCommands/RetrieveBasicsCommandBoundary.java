@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 
+import com.example.android.projectmanagement.BasicsFunctionality.Reports.ProjectOverView;
 import com.example.android.projectmanagement.BasicsFunctionality.Resource.AddNewResource;
 import com.example.android.projectmanagement.BasicsFunctionality.Resource.RetrieveListOfResourceBoundary;
+import com.example.android.projectmanagement.BasicsFunctionality.TASK_RESOURCE.RetrieveTasks_ResourcesBoundary;
 import com.example.android.projectmanagement.BasicsFunctionality.Task.RetrieveListOfTaskBoundary;
 import com.example.android.projectmanagement.BasicsFunctionality.Task.AddNewTask;
 import com.example.android.projectmanagement.R;
@@ -16,7 +19,7 @@ import com.example.android.projectmanagement.R;
 public class RetrieveBasicsCommandBoundary extends AppCompatActivity {
 
 
-    private ListView basicsCommandListView;
+    private GridView basicsCommandListView;
     private RetrieveBasicsCommandController retrieveBasicsFunctionalityController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,11 +88,18 @@ public class RetrieveBasicsCommandBoundary extends AppCompatActivity {
             case 1:
                 return new Intent(RetrieveBasicsCommandBoundary.this , AddNewResource.class );
 
-            case 3:
+            case 2:
                 return new Intent(RetrieveBasicsCommandBoundary.this , RetrieveListOfTaskBoundary.class );
 
-            case 4:
+            case 3:
                 return new Intent(RetrieveBasicsCommandBoundary.this , RetrieveListOfResourceBoundary.class );
+
+            case 4:
+                return new Intent(RetrieveBasicsCommandBoundary.this , RetrieveTasks_ResourcesBoundary.class );
+
+            case 5 :
+
+                return new Intent(RetrieveBasicsCommandBoundary.this , ProjectOverView.class );
 
             default: return null;
         }

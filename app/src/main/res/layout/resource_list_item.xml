@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="160dp"
+    android:background="@drawable/bg_grid"
     android:orientation="horizontal"
+
+
     >
 
     <RelativeLayout
@@ -18,10 +21,10 @@
             android:id="@+id/resource_type_Lay_resource_list_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimaryDark"
             android:layout_margin="20dp"
             android:textSize="18sp"
             tools:text="Worker"
+            android:textColor="@color/text"
             />
 
         <TextView
@@ -29,7 +32,7 @@
             android:layout_below="@id/resource_type_Lay_resource_list_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/text"
             android:layout_margin="20dp"
             android:textSize="18sp"
             tools:text="Project Manager"
@@ -56,7 +59,7 @@
                 android:id="@+id/number_of_source_String_Lay_resource_list_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
                 android:textSize="15sp"
                 android:text="Number of Source"
                 />
@@ -68,7 +71,7 @@
                 android:layout_below="@id/number_of_source_String_Lay_resource_list_item"
                 tools:text="5"
                 android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
 
                 />
 
@@ -86,7 +89,7 @@
                 android:id="@+id/salary_or_cost_String_Lay_resource_list_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
                 android:textSize="18sp"
                 tools:text="Salary or Cost"
                 />
@@ -99,7 +102,7 @@
                 android:layout_below="@id/salary_or_cost_String_Lay_resource_list_item"
                 tools:text="500$"
                 android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
 
                 />
 
@@ -120,7 +123,7 @@
                 android:layout_weight="1"
                 tools:text="Over Time"
                 android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
 
                 />
 
@@ -133,7 +136,7 @@
                 android:layout_below="@id/over_time_String_Lay_resource_list_item"
                 tools:text="500$"
                 android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
 
                 />
 

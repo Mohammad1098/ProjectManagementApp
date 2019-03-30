@@ -4,11 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#BDBDBD"
     >
 
-    <ListView
+    <GridView
         android:id="@+id/basics_Command_Lay_activity_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:horizontalSpacing="32dp"
+        android:verticalSpacing="32dp"
+        android:numColumns="2">
+
+    </GridView>
+
+
 
 </LinearLayout>

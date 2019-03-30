@@ -33,9 +33,9 @@ public class AddNewResource extends AppCompatActivity {
     private Button addNewResource;
 
     @Override
-    protected void onCreate(Bundle sa){
+    protected void onCreate(Bundle savedInstanceState){
 
-        super.onCreate(sa);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.add_new_resource);
         createViews();
         attachResourceSpinnerToListener();
@@ -297,16 +297,22 @@ public class AddNewResource extends AppCompatActivity {
 
 
             ////////////////////////////////////////////////////////////////
+            double overTime;
+
 
             String overTimeAsString = overTimeEditText.getText().toString().trim();
-            if(TextUtils.isEmpty(salaryAsString)){
 
-                overTimeAsString="0";
+            if(TextUtils.isEmpty(overTimeAsString)){
+
+                overTime =0;
+
+            }
+            else {
+
+                overTime = Double.valueOf(overTimeAsString);
 
             }
 
-
-            double overTime = Double.valueOf(overTimeAsString);
 
             contentValues.put(Schema.Resource.RESOURCE_NAME , resourceName);
             contentValues.put(Schema.Resource.RESOURCE_TYPE , 1);

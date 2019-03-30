@@ -6,7 +6,12 @@ public class Task_Resource {
     private long taskId;
     private String resourceName;
     private String taskName;
+    private double totalCost;
 
+
+    public double getTotalCost() {return totalCost;}
+
+    public void setTotalCost(double totalCost) {this.totalCost = totalCost;}
 
     public long getResourceId() {
         return resourceId;

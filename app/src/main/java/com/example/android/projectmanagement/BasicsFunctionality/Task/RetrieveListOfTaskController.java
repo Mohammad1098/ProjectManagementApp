@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.example.android.projectmanagement.BasicsFunctionality.Adapter.RetrieveTasksAdapter;
+import com.example.android.projectmanagement.BasicsFunctionality.DataBase.Schema;
 
 import java.util.ArrayList;
 
@@ -27,6 +28,13 @@ public class RetrieveListOfTaskController  extends AppCompatActivity {
     }
 
 
+    public RetrieveListOfTaskController( Activity activity  ) {
+
+        this.activity = activity;
+
+    }
+
+
     public boolean retrieveListOfTask (){
 
         retrieveListOfTaskDA = new RetrieveListOfTaskDA(this.activity );
@@ -43,6 +51,26 @@ public class RetrieveListOfTaskController  extends AppCompatActivity {
 
             return false;
         }
+
+    }
+
+
+    public String retrieveTaskById(long taskId){
+
+        retrieveListOfTaskDA = new RetrieveListOfTaskDA(this.activity );
+
+
+        return retrieveListOfTaskDA.retrieveTaskById(taskId);
+
+    }
+
+
+    public int returnTaskDuration(long taskId){
+
+        retrieveListOfTaskDA = new RetrieveListOfTaskDA(this.activity );
+
+
+        return retrieveListOfTaskDA.returnTaskDuration(taskId);
 
     }
 

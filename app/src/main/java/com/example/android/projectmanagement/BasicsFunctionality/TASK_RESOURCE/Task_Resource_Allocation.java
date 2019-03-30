@@ -71,7 +71,6 @@ public class Task_Resource_Allocation extends AppCompatActivity {
             public void onClick(View v) {
 
                 for (int i = 0 ; i<checked_resources.length ; i ++){
-                    Log.e("dsfsdf","sdfdf");
                     checked_resources[i] = false;
                     user_resources_selected.clear();
                     selectedResources.setText("");

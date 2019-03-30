@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -155,7 +156,7 @@ public class AddNewTask extends AppCompatActivity {
         }
 
 
-        if(endDate < startDate){
+        if(startDate - endDate  > 86400000){
 
             Toast.makeText(getApplicationContext() , "Please make sure that end date is correct" , Toast.LENGTH_LONG).show();
             return;
@@ -177,8 +178,15 @@ public class AddNewTask extends AppCompatActivity {
         contentValues.put(Schema.Task.TASK_NAME , taskName);
         contentValues.put(Schema.Task.START_DATE , startDate);
         contentValues.put(Schema.Task.END_DATE , endDate);
-        long task_duratiom = endDate - startDate;
-        contentValues.put(Schema.Task.TASK_DURATION , task_duratiom);
+        long task_duration = endDate - startDate;
+
+        if(endDate - startDate <= 86400000 ){
+
+            Log.e("Add task " , "day is 1 ");
+            task_duration=1;
+        }
+
+        contentValues.put(Schema.Task.TASK_DURATION , task_duration);
 
         getContentResolver().insert(Schema.Task.CONTENT_URI, contentValues);
 

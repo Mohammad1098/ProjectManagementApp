@@ -26,8 +26,10 @@ public class ProjectManagement_Provider extends ContentProvider {
          // for Resource table
         sUriMatcher.addURI(Schema.Resource.CONTENT_AUTHORITY , Schema.Resource.PATH , 2);
 
+         sUriMatcher.addURI(Schema.Task_Resource.CONTENT_AUTHORITY , Schema.Task_Resource.PATH , 3);
 
-    };
+
+     };
 
 
 
@@ -56,6 +58,10 @@ public class ProjectManagement_Provider extends ContentProvider {
 
             case 2:
                 cursor = db.query(Schema.Resource.TABLE_NAME , projection , selection , selectionArgs , null , null , sortOrder );
+                break;
+
+            case 3:
+                cursor = db.query(Schema.Task_Resource.TABLE_NAME , projection , selection , selectionArgs , null , null , sortOrder );
                 break;
 
             default:
@@ -87,6 +93,9 @@ public class ProjectManagement_Provider extends ContentProvider {
             case 2 :
                 return insertRecord(uri ,values , match );
 
+            case 3 :
+                return insertRecord(uri ,values , match );
+
             default:
                 return null;
 
@@ -109,6 +118,10 @@ public class ProjectManagement_Provider extends ContentProvider {
 
             case 2:
                 id=db.insert(Schema.Resource.TABLE_NAME , null , contentValues);
+                break;
+
+            case 3:
+                id=db.insert(Schema.Task_Resource.TABLE_NAME , null , contentValues);
                 break;
 
             default:

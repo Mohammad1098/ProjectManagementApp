@@ -45,12 +45,13 @@ public class DbHelper extends SQLiteOpenHelper {
 
         String TASK_RESOURCE_TABLE = "CREATE TABLE "+Schema.Task_Resource.TABLE_NAME +"("
 
-                +Schema.Task_Resource.ID+" PRIMARY KEY AUTOINCREMENT ,"
-                +Schema.Task_Resource.TASK_ID +" INTEGER ,"
-                +Schema.Task_Resource.RESOURCE_ID +" INTEGER ,"
-                +"FOREIGN KEY ("+ Schema.Task_Resource.TASK_ID+") REFERENCES "+Schema.Task.TABLE_NAME+"("+Schema.Task.ID+")) ,"
-                +"FOREIGN KEY ("+ Schema.Task_Resource.RESOURCE_ID+") REFERENCES "+Schema.Resource.TABLE_NAME+"("+Schema.Resource.ID+"));";
+                +Schema.Task_Resource.ID +" INTEGER PRIMARY KEY AUTOINCREMENT ,"
+                +Schema.Task_Resource.TASK_ID +" INTEGER  ,"
+                +Schema.Task_Resource.RESOURCE_ID +" INTEGER  ,"
+                +"FOREIGN KEY("+Schema.Task_Resource.TASK_ID+") REFERENCES "+Schema.Task.TABLE_NAME+"("+Schema.Task.ID+") , "
+                +"FOREIGN KEY("+Schema.Task_Resource.RESOURCE_ID+") REFERENCES "+Schema.Resource.TABLE_NAME+"("+Schema.Resource.ID+"));";
 
+        //,FOREIGN KEY(TOPIC_ID) REFERENCES topics_table(_ID), FOREIGN KEY(USER_ID) REFERENCES users_table(_ID)
 
 
 

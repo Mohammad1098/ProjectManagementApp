@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_grid"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+
+        >
+
+
+        <TextView
+            android:id="@+id/task_Column_Lay_retrieve_task_resource_list_item"
+            android:text="Task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/text"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/task_name_Lay_retrieve_task_resource_list_item"
+            android:text="test test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/task_Column_Lay_retrieve_task_resource_list_item"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/resource_Column_Lay_retrieve_task_resource_list_item"
+            android:text="Resources"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/text"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/resource_name_Lay_retrieve_task_resource_list_item"
+            android:text="test test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/resource_Column_Lay_retrieve_task_resource_list_item"
+            />
+
+
+        <TextView
+            android:id="@+id/task_total_cost_Lay_retrieve_task_resource_list_item"
+            android:text="10003$"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/resource_name_Lay_retrieve_task_resource_list_item"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

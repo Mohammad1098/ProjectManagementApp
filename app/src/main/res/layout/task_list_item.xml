@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:orientation="horizontal"
+    android:background="@drawable/bg_grid"
     >
 
     <RelativeLayout
@@ -18,9 +19,9 @@
         android:id="@+id/task_name_Lay_task_list_item"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_margin="20dp"
-        android:textSize="18sp"
+        android:textColor="@color/text"
+        android:layout_margin="24dp"
+        android:textSize="20sp"
         tools:text="Test Test Test Test Test Test Test Test Test Test Test"
         />
 
@@ -45,7 +46,7 @@
                 android:id="@+id/startdate_String_Lay_task_list_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
                 android:textSize="18sp"
                 android:text="Start Date"
                 />
@@ -57,7 +58,7 @@
                 android:layout_below="@id/startdate_String_Lay_task_list_item"
                 tools:text="23/12/2014"
                 android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
 
                 />
 
@@ -75,7 +76,7 @@
                 android:id="@+id/enddate_String_Lay_task_list_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
                 android:textSize="18sp"
                 android:text="End Date"
                 />
@@ -88,7 +89,7 @@
                 android:layout_below="@id/enddate_String_Lay_task_list_item"
                 tools:text="23/12/2014"
                 android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/text"
 
                 />
 
@@ -102,7 +103,7 @@
             android:layout_weight="1"
             tools:text="3 Days"
             android:textSize="18sp"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/text"
 
             />
 
